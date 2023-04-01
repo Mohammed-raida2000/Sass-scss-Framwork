@@ -1,0 +1,332 @@
+#  Cmd command line >>Git/Githup: 
+@@@@@@ Ops!
+ هدا الموقع يعم  في كل اشي بخص الكوماند لاين والتيرمنل  لاي اوبيريتنج سيستم OS  والااومرالي بتلزمك
+
+https://ss64.com/ >>using shallpower
+@@@@@@
+
+صورة بتوضحلك كل اشي ف
+https://www.google.com/search?q=git+local+remote&sxsrf=ALiCzsaKFTK_G9y2AR8cG1V3FYywzur2MQ:1672174750447&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiHu4Kw2Jr8AhU98rsIHSK5DQ8Q_AUoAXoECAEQAw&biw=1440&bih=749&dpr=1#imgrc=aU5FqWVbp_XvSM
+
+create multi-new file (make directoriy) >> 
+λ mkdir css html css "READ ME"
+
+create new file (make directoriy) >> 
+λ mkdir name-file 
+λ add file from> cmd line > cd name-file 
+λ clone file from repository/githup >> 
+git clone https://(link from yourgitub same bate)
+@@@@@@@@@@@@@@@@@@@
+# من درس الكوماند لاين command line
+@@@@@@@@@@@@@@@@@@@
+نفس امر الprint 
+λ echo"#Command-line-for-your-git-githup"
+ايضا :
+λ echo "hello" > mohammed.xlxs بتنشا فايل وبتجط  فيه كلمة هالو 
+λ echo "hello moha" > mohammed.xlxs  بتنشا فايل وبتجط  فيه كلمة هالو محم وبتحزف النص الي قبل الي هوا هالو 
+# بدناش اه يحزف القديم ويعمل نص جديد زي هي
+λ echo "hello moha" >> mohammed.xlxs 
+λ cat mohammed.xlxs بتعرض محتوى الملف الي كتبنا فيه
+λ OR cat * بتعرض كل الملفات ومحتواهن
+λ بدي انقل محنوى ملف الاول فالتاني فالتالت  وهدا وبعدين كلهم  فملف واحد  فاينال كيف ؟؟
+λ cat mogammed
+λ echo mohammed.txt
+mohammed.txt
+
+---
+λ echo "mohammed" >mohammed.txt
+λ echo "rana" >rana.txt
+λ echo "sawsan" >sawsan.txt
+λ cat * محتوى كل الملفات
+"mohammed"
+"rana"
+"sawsan"
+هلقيت بدي انقل محتوى محمد  جوات رنا  بس هان بحزف محتوى رنا القديم
+λ move mohammed.txt >rana.txt
+هلقيت بدي انسخ محتوى محمد  جوات رنا  بس هان بحزف محتوى رنا القديم
+λ cat mohammed.txt >rana.txt
+المحتوى هيكون كتالتالي
+λ cat rana.txt
+"mohammed"
+بدي انقل هان مح توى كل الملفات في ملف فاينال 
+λ cat mohammed.txt rana.txt sawsan.txt > filly.txt
+المحتوى---
+λ cat filly.txt
+"mohammed"
+"mohammed"
+"rana"
+"sawsan"
+
+λ ls
+filly.txt  mohammed.txt  rana.txt  sawsan.txt
+
+# How to creat Repository about Cmder...
+λ touch README.md
+λ git add README.md
+λ git init
+λ git commit -m "first commit"
+λ git branch -M main
+λgit remote add origin  الرابط بتغر حسب الريبو 
+https://github.com/Mohammed-raida2000/Command-line-for-your-git-githup.git
+git push -u origin main
+
+λ ls >> هدا الامر يمعلم بطلعلك كل الملفات الي بتتعامل معاها فالماستر برانش
+or dir >>
+λ code namefile.extention كيف تفتح الفيجول ستيديو من هان
+
+
+
+هان بدي احزف ملف من ال loacal repo to staging area 
+λ git clean -n file name
+&
+λ git clean -f
+
+هدا الامر برجعلك للملف الي قبلوا 
+c:\Users\hp\mohammed\our-team-project\new-team-laravalphp (devOps -> origin)
+λ cd ..
+الي 
+c:\Users\hp\mohammed\our-team-project (devOps -> origin)
+.....................**********.....................
+>هدا لحكي لم ا يكون  عندك  ريبو كامل وتاخد منوا نشخة عن طريق الريبو لاجهاز 
+< C:\Users\hp\moh-githup>git clone https://github.com/Mohammed-raida2000/Template-1Html-Css-project.git>
+
+> C:\Users\hp\moh-githup\
+ بدك تاخد نسخة من الجيت هب للاب توب
+ الي هوا >> remote repo to working dirctory 
+
+λ git clone الرابط من  الجيتهبhttps://github.com/Mohammed-raida2000/Template_1Html_Css_project.git
+> you must add the (Template_1Html_Css_project) file inside README via command:
+ git clone زي هيك ...>>
+λ cd Template_1Html_Css_project
+λ C:\Users\hp\moh-githup\Template_1Html_Css_project (main -> origin)
+
+> git status >>  بتوضحلك حالة الملفات
+> git remote -n << يتوضحلك كل الامور الحدف والاضافة 
+> creat new file >>
+ touch filename
+
+to add file >> or to add all file 
+> git add (namr file) .> git add * with star
+
+to delete file >>
+> git reset head (name file)
+
+to use help the prog
+>  git --help
+..................... الخطوات
+>>  cd README.md file
+EX:>> C:\Users\hp\moh-githup\Template_1Html_Css_project (main -> origin)
+>>  git add file 
+>>  git commit file to (local repository)
+       . git commit -m "creat project"  
+>>  git push ( bransh name )  
+       . git push origin main
+-----------
+# مهم ديربالك يحج
+>>>>عشان تعرف ال origin file << >> 
+use: 
+git remote -v
+-----------
+>>   الان  لو بدي اجيب ملفات من السيرفر تع التيم الي كل التيم برفع  عليه شغلوا واخد نسخة وادمجها مع نسختي في ال 
+ WOrking directory وامجهم في ال WOrking directory loacal repo  و
+> git pull origin >>
+
+يعني بعمل امرين هان  fetch + merge in working dirctory
+>> عشان   تعرض كل ال Config 
+>  git config --list 
+>> عشان  تعدل على ال config
+>  git config --global user.name "mohammed abu  reada" 
+
+λ git branch
+* master
+>> عشان  تعدل على الاوامر والاوان مثلا بنفس المحرر
+> git config --global --edit 
+
+>>>>>>>>>>>
+change your ssh url by an http url for your remote 'origin', use:
+> git remote set-url origin https://github.com/<user_name>/<repo_name>.git
+
+
+>كيفية إنشاء Github Public Key وتجربة الإتصال بالموقع
+Generating public/private rsa key pair.
+1- > ssh-keygen -t rsa -b 4096 -C "abureada201@gmail.com"
+2-> to shoow your puplic key and added to your github: 
+cat ~/.ssh/id_rsa.pub >> using to show the محتوى المفتاح
+الي بدك  تظيفوا على الgithup تاعك
+
+##  الان  بدي اتصل بالجت هب بتاعي من خلال  الCmd 
+using command : ssh -T git@github.com 
+>>result cmd 
+Enter passphrase for key 'C:\Users\hp/.ssh/id_rsa':
+Hi Mohammed-raida2000! You've successfully authenticated, but GitHub does not provide shell access.
+.....................**********.....................
+
+الان لو بدي عندي مشروع  جاهز  على الاب وبدي رفعوا على الجت هب فيعني الريبو انا الي عملتوا مش جاهز  زي يلي فوق 
+1>mkdir repostiry\
+1>cd C:\Users\hp\repostiry\
+2>git init >> عشان تعمل تهأية لملف ال .git جواتوا
+3>touch index.html >>امر توتش بيعمل اضافة ملف جوا الملف الريبوستري touch 
+4>git status
+5>git add index.html
+6>git commit -m "created the main file "
+
+.....................**********.....................
+
+Q 1 :
+الاسماء المستعارة : alias 
+git config  --global alias.ch checkout
+ 
+بدي  اعمل ملف 
+λ touch rana.exe
+وأضيفوا لمجموعة ملفات  في الستييجرن ايريا وبعدين
+λ git add rana.exe
+فحص الحالة
+λ git status
+بدي اعمل برانش جديد واتفقد انوا عندي
+λ git branch >name branch
+or 
+λ git br list
+استخدم هدا البرانش وابدل عليه
+λ git checkout >name branch 
+بدي افحص المصدر الملفات عندي لتاكد
+λ git branch
+  بنشأ برانش جديد وابدل على عليه  
+λ git checkout -b >name branch
+حزف برانش موجود  قبل
+λ git branch -d >name branch
+بعيد تسمية البرانش لاسم جديد
+λ git branch -m >name branch
+مثلا حزفت شغلة وبدي اتراج عن حوفها عشان ارفعها فالستيجن اريا
+λ git st
+λ git commit -m "new file"
+λ git reset
+
+& في طريقتين عشان  ابع  فيهم  الداتا على ال Github
+1-  اما بمعمل برانش فرعي من الرئيسي ورا بعض  وبعدين بدمحوا مع  الرئيسي وبعدين برفعوا مباشرة على السيرفر تاعي 
+2- او نفس البرانش الرئيسي برفوا دايركت  مع ال pull requste
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+بدمح البرنش الفرعي الي انا عملتوا من الرئيسي تاعي  الي انا عدلت عليه  مع الرئيسي  عشانوا يسيروا واحد 
+λ git merge >name branch
+الخطوات:
+C:\Users\hp\mohammed\our-team-project (devOps -> origin)
+1λ git branch NEW SCROLL
+2λ git checkout NEW-SCROLL
+C:\Users\hp\mohammed\our-team-project (NEW-SCROLL)
+3λ touch java.js
+4λ git add java.js
+5λ git commit -m "java script file"
+6λ git checkout devOps
+C:\Users\hp\mohammed\our-team-project (devOps -> origin)
+7λ git merge NEW-SCROLL
+---OR-----
+برفعوا على الجيت هاب او  ال  وبتدمج مع الماستر centeralize github me  
+λ git push origin devOps
+λ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+λ نفس الاشي بس بدي ابعت  على طول على المصدر مع  ال pull requeste
+λ نفس الخطوات بس بدون  merge مباشرة ببعت مع البول ريكوست
+-----------------------------------
+برجع الملفات بعد ما ضفتها فمرحلة ال staging area
+Unstaged changes after reset:
+λ git reset
+to delete file >>
+> git reset head (name file)
+
+بدي ارجع  الملف من  مرحلة ال local repo to unstaging area
+λ git restore --staged moh.exe
+
+----------------3333-------------------
+بتخزن الملفات لو مثلا ما بدي ارفعها على البرانش او  الاشي قاعد  بعدل عليه
+وبحفظها فالستاش الخاص بالجيت
+>Stash >>   Stash the changes in a dirty working directory away
+
+λ ls >> هدا الامر يمعلم بطلعلك كل الملفات الي بتتعامل معاها فالماستر برانش
+λ git Stash
+λ git pull origin devOps
+λ git push origin devOps
+بطلع قائمة الملفات الي حزنتها وبدي ارجع  اتعامل معاها قبل ما ارفعها على الريبو او اي سنيرفر
+λ git stash list
+بدي استدي هاي الملفات واتعامل معاها ,وخلص بتطير من الصندوق 
+λ git stash pop
+λ git status
+λ git commit -m "addded file from stash"
+λ git push origin devops
+ممكن بعد مثلا  متعمل ملف ويكون  عندك  مجموعة ملفات فالستاش stach
+فعشان ما تتلخبط يحج بتسمي المف او محتواه باي اي اسم بدك اياه  زي هيك 
+λ touch rr.xl
+λ git add rr.xl
+λ git stash save "RANA RAIDA"
+λ git stash list
+λ ممكن اطلع املف من الستاش واعيد تسميت محتواه
+λ git stash pop
+λ git status ببينلك كل الملفات الي عملتها والي بالستيشن ايريا
+λ git stash list
+λ git stash save "mesg of contacts"
+الفرق بين ال pop  & stesh 
+pop >>بياخد  الملف من  الستاش وبحزف الاستاش تعوا بس  
+apply>> هان بياخد  التعديلات  زي مهيا وبسيب الستاش الاصلي مكانوا
+
+مثلا بدي احزف واحد  مخصص من مكان مخصص  من الستارش 
+λ git stash pop stash@{3}
+λ git st
+
+ بدي اعرض ي حبيبي الستاش ايش في ملفات وقصص وبلاوي زرقة
+λ git stash list
+λ git stash show stash@{1}
+
+ بدي احزف كل الاستاش الي انا عملتها  واريحه منها 
+λ git stash clear
+
+بدي ارجع  الملف من  مرحلة ال local repo to unstaging area
+λ git restore --staged moh.exe
+----------------------
+عشان  تحزف ملفات من ال 
+Github كتالي 
+----------------------
+λ git log >  to show commit serial
+note>>حرفq بطلعك  من ال log
+λgit reset --hard 6245a9d5a8dcd5724e358f6a1b2a14d55ae70319
+λgit push origin devOps --force >>عشان  ارفع التعديلات  النهائية
+
+
+09090909090
+# عشان  تتعمق فالملف والتجاهل من هان
+# https://git-scm.com/docs/gitignore
+
+# هاي الملفات كلها مش هيشوفها 
+# ----------------------
+# هرفع  كل الملفات ماعدا عدا الملف الي بمتدادا txt
+*.txt
+*.exe
+*.log
+#  هيتجاهل كل الملفات بانفس الامتداد معادا هدا الي بنفس الاسم
+!rana-vip.txt
+# الموضع مش بس على الامتدادات 
+# يبنطبق هدا على الملفات برضوا 
+team-2laravalphp/
+# ممكن ملف جوات الteam-2laravalphp/
+team2.exx
+# ممكن  من برضوا نظيف ملف ممنوع  بنظاف من ال gitignore
+# عن طريق امر ال --force or-f
+
+#التعامل مع ال Tags ال Releases الجزء الأول
+ مثلا عندي اصدار اول وحيد  وبعد  هيك  بدي اطلق عدة  اصدارات منوا فبشتخدم  التاج
+λ touch first-version
+λ git add first-version 
+λ git push origin  devOps
+λ git tag v1.0
+λ git tag
+v1.0
+λ git push origin v1.0
+λ git tag v1.0
+....
+ لو بدي احزف ال tag من خلال ال comman line
+# بتحزف محلي 
+λ git tag -d v1.0
+Deleted tag 'v1.0' (was 8ed5848)
+λ git tag -l >> يتطلع الlist to tag
+ # بتحزف من ال github
+λ git push origin --delete v1.0
+
+To https://github.com/ABRAIDA-MOHAMMED/our-team-project.git
+ - [deleted]         v1.0

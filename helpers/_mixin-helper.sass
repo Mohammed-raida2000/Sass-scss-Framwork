@@ -1,0 +1,26 @@
+//add dim from users 
+    @mixin circle($dimentions )
+    border-radius: 30px
+    background-color: red
+    height: $dimentions
+    width: $dimentions
+// centering
+    @mixin centerning
+    display: flex
+    justify-content: center
+    align-content: center
+
+@mixin reset-list
+    padding: 0
+    margin: 0
+    list-style: none
+
+@mixin animation($left-to-rigth)
+  @keyframes #{$left-to-rigth}
+    @content
+
+  @-webkit-keyframes #{$left-to-rigth}
+    @content
+
+    
+        

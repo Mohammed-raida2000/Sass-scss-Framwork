@@ -1,0 +1,346 @@
+// // // // تكليف1
+// // .contant
+
+// //     >.box
+// //         padding: 15px
+// //         >.title
+// //             font-size: 15px
+// //     .cat
+// //         padding: 20px
+// //     &.premery::before
+// //         content: "Premium Box"
+// //     &.premery:hover
+// //         background-color: #eee
+
+// // // /// تكليف2
+// // .class >
+// //     .child
+// //         padding: 20px
+
+// // .class
+// //     >
+// //         .child
+// //             padding: 20px
+
+// // .class
+
+// //     >   .child
+// //         padding: 20px
+
+// // // /// تكليف3    
+
+// //     &
+// //     font:
+// //         size: 20px
+// //         weight: bold
+
+// // // /// تكليف4          
+// // .parent
+// //     & + .sibling
+// //         margin: auto
+// //         top: 10px
+
+// //     & ~ .last
+// //         padding: 10px
+
+// // /// تكليف5     
+// // .widget
+// //     background-color: white
+// //     padding: 20px
+// //     @extend .widget
+
+// // .main-border
+// //     border: 1px solid #CCC
+
+// // .my-class
+// //     font-weight: bold
+// //     margin: 20px auto
+// //     @extend .widget
+// //     @extend .main-border
+
+// // /// --> or 
+// // %widget
+// //     background-color: white
+// //     padding: 20px
+
+// // .main-border
+// //     border: 1px solid #CCC
+
+// // .my-class
+// //     font-weight: bold
+// //     margin: 20px auto
+// //     @extend %widget
+// //     @extend %main-border
+
+// // // /// تكليف 6
+// // %widget
+// //     background-color: white
+// //     padding: 20px
+
+// // %main-border
+// //     border: 1px solid #CCC
+
+// // .my-class
+// //     @extend %widget
+
+// //     &
+// //         @extend %main-border
+
+// //     &
+// //         font-weight: bold
+// //         margin: 20px auto
+
+// // ///التكليف 07
+// // .box
+// //     & h2
+// //         font-size: 20px
+// //     & p
+// //         @extend h2
+
+// // @media (max-width: 575px)
+// //     .box
+// //         & h2
+// //             font-size: 20px
+// //         & p
+// //             @extend h2
+
+// //         & h2
+// //             span
+// //                 font-size: bold
+
+// // ///التكليف 08    
+// // // The Code
+// // // Do Not Edit Here
+// // // $red: #e91e63
+// // // $green: #009688
+
+// // // // Add What You Want Here
+// // // $link-color: #009688
+// // // $link-hover: #e91e63
+// // // // Do Not Edit Here
+// // // .box a
+// // //     color: $red
+// // // &:hover
+// // //     color:$green
+
+// // /*//التكليف 10*/
+// // // .box
+// // //     /*! font sixe #{.box}*/
+// // //     font-size: 20px
+// // //     &-holder
+// // //         width: 1000px
+// // //     &-contant
+// // //         margin: auto
+
+// // /*//التكليف 11 إلى 15*/   
+
+// // // @mixin arrow('$direction')
+// // //     content: ""
+// // //     position: absolute
+// // //     border: 20px soild transparent
+// // //     @if arrow('$direction') == 'top'
+// // //         left: 50%
+// // //         transform: translateX(-50%)
+// // //         top: -40px
+// // //         border-bottom-color: red
+
+// // //     @else if arrow('$direction') == 'right'
+// // //         right: -40px
+// // //         transform: translateY(-50%)
+// // //         top: 50%
+// // //         border-left-color: red
+
+// // //     @else if arrow('$direction') == 'bottom'
+// // //         bottom: -40px
+// // //         transform: translateX(-50%)
+// // //         left: 50%
+// // //         border-top-color: red
+
+// // //     @else if arrow('$direction') == 'left'
+// // //         left: -40px
+// // //         transform: translateY(-50%)
+// // //         top: 50%
+// // //         border-right-color: red
+// // //     @else
+// // //         @error 'this diections #{$direction} not vaild'
+
+// // // .element
+// // //     &:hover
+// // //         @include arrow('$direction') == 'bottom'
+
+// // /* التكليف 02 */ >> 
+// // $grid_col: 16
+// // @for $i from 1 through $grid_col
+// //     .col-#{$i}
+// //         width: percentage( $i / $grid_col)
+// // التكليف 03
+
+// // $names:
+// //   "books" 20px red 18,
+// //   "games" 30px green 18,
+// //   "dvds" 20px blue;
+
+// // @each $name, $padding, $font, $color in $names {
+// //     .#{$name} {
+// //         padding: $padding
+// //         @if ($font == null) {
+// //             font-size: 16px
+// //         }
+// //         @else {
+// //             font-size: #{$font}px
+// //         }
+// //         border-bottom: 2px soild $color
+// //         color: #444
+// //     }
+// // }
+
+// /* التكليف 04*/
+
+// // $init: 1
+// // @while ($init <= 5 )
+// //     .circle-#{$init * 100}
+// //         width: $init * 100px
+// //         height: $init * 100px
+// //         border-radius: ($init * 100px)/2
+
+// //     $init: $init + 1
+
+// /* التكليف 05*/
+
+// @for $i from 1 through 5
+//   .circle-#{100 * $i}
+//     width: #{100 * $i}px
+//     height: #{100 * $i}px
+//     border-radius: (100px * $i)/2
+
+// @mixin placeholder ()
+//   textarea:-moz-placeholder
+//     color: #777
+
+//     textarea::-moz-placeholder
+//       color: #777
+
+//     textarea:-ms-input-placeholder
+//       color: #777
+
+//     textarea::-webkit-input-placeholder
+//       color: #777
+
+// textarea.#{placeholder}
+//   color: #777
+
+// @include placeholder ()
+
+// @mixin flex-center($width: 400px)
+//   display: flex
+//   justify-content: center
+//   align-items: center
+//   width: $width
+
+// .box-one
+//   @include flex-center
+
+// .box-two
+//   @include flex-center
+
+// /*تكليف 1 
+//  الدروس من رقم 7 إلى رقم 10*/
+
+// // $language: "ar" // English
+// // $gap: 20px
+// // $main: "school"
+// // $child: "box"
+
+// // .#{$main}
+// //   padding: ($gap)
+// //   margin-left: ($gap)
+// //   @if ($language == "en")
+// //     direction: ltr
+// //   @else if ($language == "ar")
+// //     direction: tl
+
+// //   & .#{$main}-.#{$child}
+// //     padding: #{$gap - 10px}
+
+// //   &:hover .#{$main}-.#{$child}
+// //     background-color: #eee
+
+// // /*! sass code*/
+// //   $main-color: red
+// //   $alt-color: blue
+
+// // /* Website Theme Main Color Is: #{$main-color}'*/
+// // /* Website Theme Main Color Is: #{$alt-color}'*/
+
+//  $number: 10
+// $number: 8
+// $number: 5
+// .class
+// @if $number > 8
+//   color: blue
+// @else if $number > 5
+//   color: green
+// @else
+//   color: red
+
+// $number: 10
+// $color: red
+// $theme: light
+
+// @if $number > 5 & $color == 'red' & $theme != 'dark'
+//   color: red
+
+// $number: 8
+// .box
+//   @if $number == 10
+//     background-color: #EEE
+//     text-align: center
+
+//   @else if $number == 9
+//     background-color: #EEE
+
+//   @else if $number == 8
+
+//
+// @import ../Sass framwork/helpers/_mixin-helper
+// @include animation(lft)
+
+//   0%
+//     opacity: 0
+//   100%
+//     opacity: 2
+
+// @mixin media-queries($media)
+
+//   @if $media == small
+//     @media (max-width: 767px )
+//       @content
+
+//     @else if $media == mobile
+//       @media (min-width: 768px ) and ( max-width:991px)
+//         @content
+
+//     @else if $media == large
+//       @media (min-width: 991px ) and ( max-width:1199px)
+//         @content
+
+//     @else if $media == xlarge
+//       @media  ( min-width:1400px)
+//         @content
+
+// .meddmoha
+//   @include media-queries(xlarge)
+//     padding: 10px
+
+// $num: 2
+// $start: 100
+
+// @function double($size)
+//   @return $size * $num
+
+// @for $i from 1 through 5
+//   .box-#{$start}
+//     width: #{$start}px
+//     height: #{double($start)}px
+  
+//   $start: $start * 2
