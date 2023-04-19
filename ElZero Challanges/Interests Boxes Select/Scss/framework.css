@@ -1,0 +1,331 @@
+/*  فكرة الفريم وورك انوا توفرعليك وقت وجهد فكتابة والكود والخاصية الي بتكرر الها نفس الخصائص والي هتسخدمها كتير  */
+/* start framework */
+/* start box */
+.d-flex {
+    display: flex;
+}
+
+.flex-w {
+    flex: 1;
+
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-block {
+    display: block;
+}
+
+/* you  can collecting all proparetis on mobile media quairy with no problem<>this`s opinion*/
+@media(max-width:767px) {
+    .d-block-mobile {
+        display: block;
+    }
+
+    .hiden-mobile {
+        display: none;
+    }
+
+    .txt-c-mobile {
+        text-align: center;
+    }
+}
+
+.gap {
+    gap: 20px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.j-content {
+    justify-content: space-evenly;
+}
+
+/* S.margin & S.padding */
+.m-0 {
+    margin: 0;
+}
+.m-15 {
+    margin: 15px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+.ml-5 {
+    margin-left: 5px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+
+.ml-15 {
+    margin-left: 15px;
+}
+.ml-30 {
+    margin-left: 30px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-15 {
+    padding: 20px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+.pt-15 {
+    padding-top: 15px;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+.pb-20 {
+    padding-bottom: 20px;
+}
+.pl-15 {
+    padding-left: 15px;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+/*  S.color  */
+.bg-white {
+    background-color: white;
+}
+
+.bg-eee {
+    background-color: #eee;
+}
+
+.bg-blue {
+    background-color: var(--blue-color);
+}
+
+.bg-alt-blue {
+    background-color: var(--blue-alt-color);
+}
+
+.bg-blue {
+    background-color: var(--blue-color);
+}
+
+.bg-orange {
+    background-color: var(--orange-color);
+}
+
+.bg-green {
+    background-color: var(--green-color);
+}
+
+.bg-red {
+    background-color: var(--red-color);
+}
+
+.c-black {
+    color: black;
+}
+
+.c-white {
+    color: white;
+}
+
+.c-gree {
+    color: var(--grey-color);
+}
+
+.c-blue {
+    color: var(--blue-color);
+}
+
+.c-orange {
+    color: var(--orange-color);
+}
+
+.c-green {
+    color: var(--green-color);
+}
+
+.c-red {
+    color: var(--red-color);
+}
+
+/* S.position */
+.p-relat {
+    position: relative;
+}
+.p-absolute {
+    position: absolute;
+}
+/* S.font */
+.txt-c {
+    text-align: center;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-25 {
+    font-size: 25px;
+}
+
+.fb-bold {
+    font-weight: bold;
+}
+
+/* S.border */
+.rad-6 {
+    border-radius: 6px;
+}
+
+.rad-10 {
+    border-radius: 10px;
+}
+
+.b-rad {
+    border-radius: 50%;
+}
+
+.bor-no {
+    border: none;
+}
+.border-fram {
+    border: 1px solid #eee;
+}
+
+.border-top {
+    border-top: 1px solid #ccc;
+}
+.border-bott {
+    border-top: 1px solid #ccc;
+}
+
+/* S.width + height */
+.w-full {
+    width: 100%;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.area-height {
+    height: 200px;
+}
+
+.l-height {
+    height: 4px;
+}
+
+.l-height {
+    line-height: 1.7;
+}
+
+/* s.component */
+.between-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.end-flex {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttom-shap {
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+
+
+/* end framework */

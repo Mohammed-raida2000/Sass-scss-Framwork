@@ -1,0 +1,109 @@
+/*!Start Variables*/
+:root {
+  --main-purple-color: #5c48f1;
+  --elements-background-color: #eeecfd;
+  --element-border-color: #e0e0e1;
+}
+
+/*!end Variables*/
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+.continar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.iterests .title {
+  color: var(--main-purple-color);
+  text-align: center;
+  background-color: rgba(238, 236, 253, 0.5);
+  padding: 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.iterests .combox {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+  background-color: #eeecfd;
+  padding: 10px;
+}
+.iterests .box {
+  height: 150px;
+  width: 100%;
+  color: var(--elements-background-color);
+  background-color: #ffffff;
+  border-radius: 5px;
+  position: relative;
+  border: 3px solid;
+  border-color: #ccc;
+}
+.iterests .box .checkboxs {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border: 2px solid;
+  border-color: #b5b2b2;
+  border-radius: 5px;
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+.iterests .box .checkboxs input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.iterests .box .checkboxs .check {
+  opacity: 0;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 2px;
+  background-color: rgba(92, 72, 241, 0.3);
+}
+.iterests .box .checkboxs:hover,
+.iterests .box .checkboxs .check:hover {
+  border-color: #5c48f1;
+  opacity: 1;
+}
+
+.icon {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+i {
+  font-size: 50px;
+  position: relative;
+  color: var(--main-purple-color);
+}
+
+span {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -342,5 +342,14 @@
 //   .box-#{$start}
 //     width: #{$start}px
 //     height: #{double($start)}px
-  
+
 //   $start: $start * 2
+@function get-total($nums...)
+    $tot: 0
+    @each $i in $nums
+        $tot: $tot + $i
+    @return $tot
+
+.box
+    top: get-total(100, 50, 20)
+    right: get-total(100, 50)
