@@ -1,0 +1,156 @@
+/*!Start Variables*/
+:root {
+    --main-purple-color: #f24c57;
+    --elements-background-color: #eeecfd;
+    --element-border-color: #f88992;
+}
+
+/*!end Variables*/
+/* start global rules */
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+// bootstrap containar
+.continar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+// start css code 
+.pages {
+    .continar {
+        display: flex;
+
+        .framepic {
+            width: calc(100%/2);
+
+            .border {
+                position: relative;
+            }
+
+            img {
+                height: 200px;
+                width: calc(50%);
+                left: 25%;
+                position: absolute;
+                top: 200px;
+            }
+        }
+    }
+
+    .info {
+        width: calc(100%/2);
+
+        h1 {
+            max-width: 350px;
+        }
+
+        .aboutus {
+            color: #f24c57;
+            font-weight: bold;
+            position: relative;
+
+            >span {
+                margin-left: 50px;
+
+                &::before {
+                    content: "";
+                    border: 1px solid;
+                    left: 0px;
+                    position: absolute;
+                    top: 7px;
+                    height: 7px;
+                    width: 7px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 30px;
+                    background: red;
+                    left: 5px;
+                    bottom: 6px;
+                }
+            }
+        }
+
+        p {
+            margin-top: 30px;
+            line-height: 1.7;
+            color: #777;
+            font-size: 14px;
+            max-width: 450px;
+        }
+
+        .boxs {
+            margin-top: 30px;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 500px;
+
+            .box {
+                width: 100%;
+                border: 1px solid #ccc9;
+                margin-right: 20px;
+                box-shadow: 0 0 10px #ccc;
+                position: relative;
+                height: 120px;
+
+                i {
+                    font-size: 40px;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    transform: translateY(50%);
+                }
+
+                span {
+                    position: absolute;
+                    text-align: center;
+                    bottom: 25px;
+                    width: 100%;
+
+                    font: {
+                        size: 14px;
+                        weight: bold;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    border: 1px solid;
+                    border-width: 10px;
+                    border-color: transparent transparent transparent var(--main-purple-color);
+                    right: -5px;
+                    transform: rotateZ(315deg);
+                    top: -5px;
+                }
+
+                &::after {
+                    counter-increment: plus;
+                    content: "0" counter(plus);
+                    font-size: 35px;
+                    font-family: fantasy;
+                    right: 17px;
+                    position: absolute;
+                    bottom: 12px;
+                    color: #cccccc40;
+                }
+            }
+        }
+    }
+}

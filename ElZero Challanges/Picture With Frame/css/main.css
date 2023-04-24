@@ -1,0 +1,132 @@
+/*!Start Variables*/
+:root {
+  --main-purple-color: #f24c57;
+  --elements-background-color: #eeecfd;
+  --element-border-color: #f88992;
+}
+
+/*!end Variables*/
+/* start global rules */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.continar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pages .continar {
+  display: flex;
+}
+.pages .continar .framepic {
+  width: calc(100%/2);
+}
+.pages .continar .framepic .border {
+  position: relative;
+}
+.pages .continar .framepic img {
+  height: 200px;
+  width: calc(50%);
+  left: 25%;
+  position: absolute;
+  top: 200px;
+}
+.pages .info {
+  width: calc(100%/2);
+}
+.pages .info h1 {
+  max-width: 350px;
+}
+.pages .info .aboutus {
+  color: #f24c57;
+  font-weight: bold;
+  position: relative;
+}
+.pages .info .aboutus > span {
+  margin-left: 50px;
+}
+.pages .info .aboutus > span::before {
+  content: "";
+  border: 1px solid;
+  left: 0px;
+  position: absolute;
+  top: 7px;
+  height: 7px;
+  width: 7px;
+}
+.pages .info .aboutus > span::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 30px;
+  background: red;
+  left: 5px;
+  bottom: 6px;
+}
+.pages .info p {
+  margin-top: 30px;
+  line-height: 1.7;
+  color: #777;
+  font-size: 14px;
+  max-width: 450px;
+}
+.pages .info .boxs {
+  margin-top: 30px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 500px;
+}
+.pages .info .boxs .box {
+  width: 100%;
+  border: 1px solid #ccc9;
+  margin-right: 20px;
+  box-shadow: 0 0 10px #ccc;
+  position: relative;
+  height: 120px;
+}
+.pages .info .boxs .box i {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  transform: translateY(50%);
+}
+.pages .info .boxs .box span {
+  position: absolute;
+  text-align: center;
+  bottom: 25px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+}
+.pages .info .boxs .box::before {
+  content: "";
+  position: absolute;
+  border: 1px solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent var(--main-purple-color);
+  right: -5px;
+  transform: rotateZ(315deg);
+  top: -5px;
+}
+.pages .info .boxs .box::after {
+  counter-increment: plus;
+  content: "0" counter(plus);
+  font-size: 35px;
+  font-family: fantasy;
+  right: 17px;
+  position: absolute;
+  bottom: 12px;
+  color: #cccccc40;
+}
