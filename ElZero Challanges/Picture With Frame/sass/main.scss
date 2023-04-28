@@ -29,128 +29,141 @@ body {
 .pages {
     .continar {
         display: flex;
+        justify-content: space-between;
+        width: 800px;
 
-        .framepic {
-            width: calc(100%/2);
 
-            .border {
-                position: relative;
-            }
+        .border {
+            position: relative;
+            width: 22rem;
 
-            img {
-                height: 200px;
-                width: calc(50%);
-                left: 25%;
+            span {
                 position: absolute;
-                top: 200px;
-            }
-        }
-    }
-
-    .info {
-        width: calc(100%/2);
-
-        h1 {
-            max-width: 350px;
-        }
-
-        .aboutus {
-            color: #f24c57;
-            font-weight: bold;
-            position: relative;
-
-            >span {
-                margin-left: 50px;
-
-                &::before {
-                    content: "";
-                    border: 1px solid;
-                    left: 0px;
-                    position: absolute;
-                    top: 7px;
-                    height: 7px;
-                    width: 7px;
-                }
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    height: 1px;
-                    width: 30px;
-                    background: red;
-                    left: 5px;
-                    bottom: 6px;
-                }
-            }
-        }
-
-        p {
-            margin-top: 30px;
-            line-height: 1.7;
-            color: #777;
-            font-size: 14px;
-            max-width: 450px;
-        }
-
-        .boxs {
-            margin-top: 30px;
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 20px;
-            max-width: 500px;
-
-            .box {
                 width: 100%;
-                border: 1px solid #ccc9;
-                margin-right: 20px;
-                box-shadow: 0 0 10px #ccc;
-                position: relative;
-                height: 120px;
+                padding: 22px;
+                border: 1rem solid #f88992;
+                left: 26px;
+                top: 40px;
 
-                i {
-                    font-size: 40px;
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;
-                    align-items: center;
-                    transform: translateY(50%);
-                }
-
-                span {
-                    position: absolute;
-                    text-align: center;
-                    bottom: 25px;
-                    width: 100%;
-
-                    font: {
-                        size: 14px;
-                        weight: bold;
-                    }
-                }
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    border: 1px solid;
-                    border-width: 10px;
-                    border-color: transparent transparent transparent var(--main-purple-color);
-                    right: -5px;
-                    transform: rotateZ(315deg);
-                    top: -5px;
-                }
-
-                &::after {
-                    counter-increment: plus;
-                    content: "0" counter(plus);
-                    font-size: 35px;
-                    font-family: fantasy;
-                    right: 17px;
-                    position: absolute;
-                    bottom: 12px;
-                    color: #cccccc40;
+                img {
+                    height: 200px;
+                    border-radius: 6px;
+                    right: 80px;
+                    position: relative;
                 }
             }
         }
     }
+}
+
+.info {
+    width: 22rem;
+
+    h2 {
+        max-width: 400px;
+    }
+
+    .border-bold {
+        padding-left: 70px;
+        position: relative;
+        font-weight: 900;
+        color: var(--main-purple-color);
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            left: 12px;
+            bottom: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--main-purple-color);
+        }
+
+        &::after {
+            content: "";
+            border: 3px solid;
+            position: absolute;
+            left: 0;
+            height: 14px;
+            width: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-color: var(--main-purple-color);
+
+
+        }
+    }
+}
+
+p {
+    margin-top: 15px;
+    line-height: 1.7;
+    color: #777;
+    font-size: 13px;
+    max-width: 450px;
+}
+
+.boxs {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    max-width: 500px;
+
+    .box {
+        border: 1px solid #ccc9;
+        box-shadow: 2px 0 10px #ccc;
+        position: relative;
+        text-align: center;
+        padding: 20px 0;
+
+        img {
+            max-width: 45%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            border: 1px solid;
+            border-width: 10px;
+            border-color: transparent transparent transparent var(--main-purple-color);
+            right: -5px;
+            transform: rotateZ(-45deg);
+            top: -5px;
+        }
+
+        &::after {
+            counter-increment: plus;
+            content: "0" counter(plus);
+            font-size: 35px;
+            font-family: fantasy;
+            right: 17px;
+            position: absolute;
+            bottom: 12px;
+            color: #cccccc40;
+        }
+    }
+
+    span {
+        display: block;
+
+        font: {
+            size: 14px;
+            weight: bold;
+        }
+    }
+
+
+
+}
+
+.author {
+    text-align: center;
+    padding: 15px 0;
+    background: #4CAF50;
+    font-family: arial;
+    font-weight: bold;
+    margin: 10px;
 }
