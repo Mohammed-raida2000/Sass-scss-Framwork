@@ -1,0 +1,123 @@
+/* start  var */
+:root {
+    --main-color: #3b74ba;
+}
+
+/* end var */
+/* start glo rul */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans",
+        sans-serif;
+
+}
+
+.cards {
+    background-color: #ccc;
+    min-height: 100vh;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* end glo rul */
+
+/* sta code */
+.cards {
+    position: relative;
+
+    .container {
+        img {
+            position: relative;
+            left: 50%;
+            top: 30px;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .boxs {
+            background-color: white;
+            text-align: center;
+            border-radius: 6px;
+            position: absolute;
+            width: 350px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            padding: 30px 0 30px;
+        }
+
+        h1 {
+            color: var(--main-color);
+            text-transform: capitalize;
+            letter-spacing: -1px;
+            margin: 15px 0 0;
+        }
+
+        p {
+            color: #a29c9c;
+            font-size: 17px;
+            font-family: none;
+            text-transform: capitalize;
+            margin: 5px 0 10px;
+        }
+
+        .socail {
+            .box {
+                display: flex;
+                justify-content: space-between;
+                background: #f6f6f6;
+                margin: auto 25px;
+                padding: 10px;
+                text-transform: capitalize;
+                font-size: 0.88rem;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 5px;
+                }
+            }
+
+            .A {
+                padding: 4px;
+                background-color: var(--main-color);
+                color: white;
+                text-align: center;
+                transform: translateX(-50%);
+                position: absolute;
+                border-radius: 2px;
+                left: 90%;
+                bottom: -10px;
+                font-weight: bold;
+                font-size: 0.8rem;
+            }
+        }
+
+        .footer {
+            position: relative;
+            top: 300px;
+
+            .author {
+                text-align: center;
+                padding: 15px 0;
+                background: #4CAF50;
+                font-family: arial;
+                font-weight: bold;
+                margin: 10px;
+                bottom: 0;
+            }
+        }
+
+
+
+
+    }
+
+
+}
