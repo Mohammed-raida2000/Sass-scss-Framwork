@@ -1,0 +1,260 @@
+/* start  var */
+:root {
+    --main-color: #00b0ff;
+    --pr-color: #eceff1;
+    --sec-pr-color: #989494;
+    --font-12px:12px;
+
+}
+
+/* end var */
+/* start glo rul */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans",
+        sans-serif;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+.cards {
+    background-color: var(--sec-pr-color);
+    min-height: 100vh;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* end glo rul */
+
+/* sta code */
+@mixin font-dis {
+    display: block;
+    font-weight: normal;
+}
+
+@mixin chats {
+    position: relative;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+@mixin bespider {
+    content: "";
+    border-width: 7px;
+    border-style: solid;
+    top: 11px;
+    position: absolute;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    padding: 50px 70px;
+    background-image: url(../image/background\ imge.jpg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .pepole {
+        width: 300px;
+        background: white;
+        padding: 20px;
+        border-right: 1px solid var(--pr-color);
+
+        .search {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0 0 20px 0;
+
+            & input[type="search"] {
+                border: none;
+                padding: 10px;
+                border-radius: 30px;
+                background-color: var(--pr-color);
+                outline: none;
+            }
+
+            ::placeholder {
+                color: var(--sec-pr-color);
+                font-size: var( --font-12px);
+            }
+
+            i {
+                background-color: var(--main-color);
+                border-radius: 17.5px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                height: 35px;
+                width: 35px;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        .users {
+            border-top: 1px soild var(--sec-pr-color);
+
+            li {
+                .one-chats {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 10px;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 25px;
+                        border: 1px solid var(--pr-color);
+                    }
+
+                    .chat {
+                        span:first-of-type {
+                            font-size: var( --font-12px);
+                        }
+
+                        span:last-of-type {
+                            @include font-dis;
+                            font-size: var( --font-12px);
+                            color: var(--sec-pr-color)
+                        }
+                    }
+
+                    .time-chat {
+                        @include font-dis;
+                        font-size: 11px;
+                        color: var(--sec-pr-color);
+                    }
+                }
+
+                & {
+                    border-top: 1px solid var(--pr-color);
+                }
+
+                .active:checked {
+                    background-color: var(--main-color);
+                }
+
+                &:not(:last-of-type) {
+                    margin: 10px 0 10px;
+                }
+            }
+        }
+    }
+
+    .chats {
+        width: 500px;
+        height: 600px;
+        background-color: white;
+        position: relative;
+
+        .sender {
+            padding: 15px 30px;
+            background-color: var(--pr-color);
+
+            span {
+                font-weight: normal;
+                color: var(--sec-pr-color);
+            }
+
+            b {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .backgr-masg {
+        padding: 0 30px;
+        top: 40%;
+        position: absolute;
+        width: 100%;
+
+        .time {
+            position: relative;
+
+            span {
+                display: block;
+                margin: 0 auto 25px;
+                color: var(--sec-pr-color);
+                font-size: 13px;
+                background-color: white;
+                text-align: center;
+                width: fit-content;
+                position: relative;
+            }
+
+            &::before {
+                content: "";
+                border: 1px solid var(--pr-color);
+                position: absolute;
+                width: 100%;
+                bottom: 6px;
+            }
+        }
+
+        .chatleft {
+            background-color: var(--main-color);
+            color: white;
+            @include chats;
+            margin: 0 0 8px;
+
+            &::before {
+                content: "";
+                @include bespider;
+                border-color: transparent var(--main-color) transparent transparent;
+                left: -12px;
+            }
+        }
+
+        .chatright {
+            @include chats;
+            color: black;
+            background-color: var(--pr-color);
+            margin: 0 0 8px auto;
+
+            &::before {
+                content: "";
+                @include bespider;
+                border-color: transparent transparent transparent var(--pr-color);
+                right: -14px;
+
+            }
+        }
+
+        .tools {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--pr-color);
+            padding: 8px;
+            border-radius: 6px;
+            margin-top: 20px;
+
+            i {
+                color: var(--sec-pr-color);
+            }
+
+            .lovesender {
+                i :last-of-type {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
