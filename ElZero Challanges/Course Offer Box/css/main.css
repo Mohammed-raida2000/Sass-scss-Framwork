@@ -1,0 +1,147 @@
+/* start  var */
+:root {
+  --bagro-color: #51509b;
+  --buy-color: #e5af40;
+  --pric-color: #4a5568;
+  --header-color: #404b5f;
+}
+
+/* end var */
+/* start glo rul */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 800px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* end glo rul */
+/* sta code */
+.offer {
+  background-color: var(--bagro-color);
+  padding: 25px;
+}
+.offer h1 {
+  color: white;
+}
+.offer h1 + p {
+  color: white;
+}
+.offer .boxs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+.offer .boxs .box-1 {
+  background-color: white;
+  padding: 48px;
+  width: 40%;
+  border-radius: 6px;
+  height: 550px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.offer .boxs .box-1 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.offer .boxs .box-1 .header > i {
+  color: var(--buy-color);
+  margin-right: 10px;
+}
+.offer .boxs .box-1 .header > h2 {
+  color: var(--pric-color);
+  position: relative;
+}
+.offer .boxs .box-1 .header > h2::before {
+  content: "";
+  border: 3px solid var(--buy-color, 3);
+  border: 3px solid rgba(229, 175, 64, 0.4784313725);
+  width: 97%;
+  position: absolute;
+  bottom: 1px;
+}
+.offer .boxs .box-1 ul li {
+  font-size: 11px;
+  padding: 1rem 0;
+  font-weight: normal;
+  line-height: 1.7;
+  position: relative;
+}
+.offer .boxs .box-1 ul li::before {
+  content: "";
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.offer .boxs .box-1 .pay-way {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-top: 15px;
+  padding: 20px;
+}
+.offer .boxs .box-1 .pay-way > span:first-of-type {
+  font-size: 45px;
+  font-weight: bold;
+  color: var(--pric-color);
+}
+.offer .boxs .box-1 .pay-way > span:first-of-type::before {
+  content: "$";
+  font-size: 25PX;
+  bottom: 20px;
+  position: relative;
+  font-weight: normal;
+}
+.offer .boxs .box-1 .pay-way > span:first-of-type::after {
+  content: "USD";
+  font-size: 13PX;
+  position: relative;
+  font-weight: normal;
+}
+.offer .boxs .box-1 .pay-way > span:last-of-type {
+  background-color: var(--buy-color);
+  padding: 10px 15px;
+  color: white;
+  border-radius: 3px;
+}
+.offer .boxs .box-1 .team {
+  color: var(--header-color);
+  font-size: 13px;
+}

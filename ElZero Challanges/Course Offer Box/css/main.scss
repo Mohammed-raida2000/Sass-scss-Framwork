@@ -1,0 +1,153 @@
+/* start  var */
+:root {
+    --bagro-color: #51509b;
+    --buy-color: #e5af40;
+    --pric-color: #4a5568;
+    --header-color: #404b5f;
+}
+
+/* end var */
+/* start glo rul */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans",
+        sans-serif;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 800px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* end glo rul */
+
+/* sta code */
+.offer {
+    background-color: var(--bagro-color);
+    padding: 25px;
+
+    h1 {
+        color: white;
+
+        +p {
+            color: white;
+        }
+    }
+
+    .boxs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+
+        .box-1 {
+            background-color: white;
+            padding: 48px;
+            width: 40%;
+            border-radius: 6px;
+            height: 550px;
+            flex-grow: 1;
+
+            .header {
+                display: flex;
+                align-items: center;
+
+                >i {
+                    color: var(--buy-color);
+                    margin-right: 10px;
+                }
+
+                >h2 {
+                    color: var(--pric-color);
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        border: 3px solid var(--buy-color, 3);
+                        border: 3px solid #e5af407a;
+                        width: 97%;
+                        position: absolute;
+                        bottom: 1px;
+                    }
+
+                }
+            }
+
+            ul {
+                li {
+                    font-size: 11px;
+                    padding: 1rem 0;
+                    font-weight: normal;
+                    line-height: 1.7;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        border-bottom: 1px solid #ccc;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .pay-way {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                margin-top: 15px;
+                padding: 20px;
+
+                >span:first-of-type {
+                    font-size: 45px;
+                    font-weight: bold;
+                    color: var(--pric-color);
+
+                    &::before {
+                        content: "$";
+                        font-size: 25PX;
+                        bottom: 20px;
+                        position: relative;
+                        font-weight: normal;
+                    }
+
+                    &::after {
+                        content: 'USD';
+                        font-size: 13PX;
+                        position: relative;
+                        font-weight: normal;
+                    }
+                }
+
+                >span:last-of-type {
+                    background-color: var(--buy-color);
+                    padding: 10px 15px;
+                    color: white;
+                    border-radius: 3px;
+                }
+
+            }
+
+            .team {
+                color: var(--header-color);
+                font-size: 13px;
+            }
+        }
+
+
+    }
+}
