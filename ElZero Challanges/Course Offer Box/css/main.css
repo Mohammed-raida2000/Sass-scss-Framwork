@@ -24,7 +24,7 @@ ul {
 }
 
 .container {
-  width: 800px;
+  width: 1000px;
   margin-left: 3rem;
   margin-right: 3rem;
   padding-left: 15px;
@@ -55,17 +55,7 @@ ul {
           align-items: center;
   margin-top: 3rem;
 }
-.offer .boxs .box-1 {
-  background-color: white;
-  padding: 48px;
-  width: 40%;
-  border-radius: 6px;
-  height: 550px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-.offer .boxs .box-1 .header {
+.offer .boxs .box .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,15 +63,15 @@ ul {
       -ms-flex-align: center;
           align-items: center;
 }
-.offer .boxs .box-1 .header > i {
+.offer .boxs .box .header i {
   color: var(--buy-color);
   margin-right: 10px;
 }
-.offer .boxs .box-1 .header > h2 {
+.offer .boxs .box .header h1 {
   color: var(--pric-color);
   position: relative;
 }
-.offer .boxs .box-1 .header > h2::before {
+.offer .boxs .box .header h1::before {
   content: "";
   border: 3px solid var(--buy-color, 3);
   border: 3px solid rgba(229, 175, 64, 0.4784313725);
@@ -89,21 +79,21 @@ ul {
   position: absolute;
   bottom: 1px;
 }
-.offer .boxs .box-1 ul li {
-  font-size: 11px;
+.offer .boxs .box ul li {
+  font-size: 12px;
   padding: 1rem 0;
   font-weight: normal;
   line-height: 1.7;
   position: relative;
 }
-.offer .boxs .box-1 ul li::before {
+.offer .boxs .box ul li::before {
   content: "";
   border-bottom: 1px solid #ccc;
   width: 100%;
   position: absolute;
   bottom: 0;
 }
-.offer .boxs .box-1 .pay-way {
+.offer .boxs .box .pay-way {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,31 +107,62 @@ ul {
   margin-top: 15px;
   padding: 20px;
 }
-.offer .boxs .box-1 .pay-way > span:first-of-type {
+.offer .boxs .box .pay-way span:first-of-type {
   font-size: 45px;
   font-weight: bold;
   color: var(--pric-color);
 }
-.offer .boxs .box-1 .pay-way > span:first-of-type::before {
+.offer .boxs .box .pay-way span:first-of-type::before {
   content: "$";
   font-size: 25PX;
   bottom: 20px;
   position: relative;
   font-weight: normal;
 }
-.offer .boxs .box-1 .pay-way > span:first-of-type::after {
+.offer .boxs .box .pay-way span:first-of-type::after {
   content: "USD";
   font-size: 13PX;
   position: relative;
   font-weight: normal;
 }
-.offer .boxs .box-1 .pay-way > span:last-of-type {
+.offer .boxs .box .pay-way span:last-of-type {
   background-color: var(--buy-color);
   padding: 10px 15px;
   color: white;
   border-radius: 3px;
+  cursor: pointer;
 }
-.offer .boxs .box-1 .team {
+.offer .boxs .box .team {
   color: var(--header-color);
   font-size: 13px;
+}
+.offer .boxs .left {
+  background-color: white;
+  padding: 48px;
+  width: 60%;
+  border-radius: 6px;
+  height: 585px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.offer .boxs .right {
+  background-color: white;
+  padding: 48px;
+  width: 45%;
+  border-radius: 6px;
+}
+.offer .author {
+  text-align: center;
+  padding: 15px 0;
+  background: #4CAF50;
+  font-family: arial;
+  font-weight: bold;
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.offer .author span {
+  font-size: 40px;
+  color: red;
 }
