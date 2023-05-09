@@ -1,0 +1,359 @@
+/* start  var */
+:root {
+    --main-color: #1652f0;
+    --sec-color: #8c9fbb;
+    --th-colo: #eef2fe;
+    --ground-color: #f2f6fe;
+    --font-color: #fb99ac;
+    --button-color: #10d876;
+    --active-color: #f6f6f614;
+    --color-text: #53555c;
+}
+
+/* end var */
+/* start glo rul */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.dashboard {
+    background-color: white;
+    min-height: 100vh;
+}
+
+
+/* end glo rul */
+
+// start mixin sass code
+@mixin button {
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    padding: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* start  code */
+.dashboard {
+    display: flex;
+
+    .sidebar {
+        width: 170px;
+        background: var(--main-color);
+        padding: 20px;
+
+        @media (max-width:767px) {
+            width: 40px;
+            padding: 5px;
+        }
+
+        ul {
+            margin-top: 50px;
+
+            a {
+                display: flex;
+                align-items: center;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                font-size: 14px;
+                transition: 0.3s;
+                border-radius: 5px;
+                margin-bottom: 10px;
+
+                @media (max-width:767px) {
+                    display: block;
+                    padding: 5px;
+                }
+
+                span {
+                    margin-left: 10px;
+                    font-size: 12px;
+
+                    @media (max-width:767px) {
+                        display: none;
+                    }
+                }
+
+                &.active {
+                    background-color: var(--active-color);
+                }
+
+                &:hover {
+                    background-color: var(--active-color);
+                }
+
+            }
+        }
+    }
+
+    .sidecoin {
+        width: 100%;
+        position: relative;
+        padding: 0 15px;
+        font-size: 15px;
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+
+            nav {
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                .balance {
+                    padding: 9px;
+                    border-radius: 20px;
+                    box-shadow: 0px 0px 1px 0px var(--sec-color);
+                    background: var(--th-colo);
+                    margin-right: 20px;
+                    font-size: 13px;
+
+                    span:first-of-type {
+                        padding: 0 12px;
+                        color: var(--main-color);
+                    }
+
+                    span:last-of-type {
+                        padding-right: 12px;
+                        color: var(--sec-color);
+                    }
+
+                }
+
+                .data-user {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .logger {
+                        font-size: 12px;
+                        background-color: var(--main-color);
+                        color: white;
+                        border-radius: 50%;
+                        height: 30px;
+                        width: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        margin-right: 10px;
+
+                        font: {
+                            size: 12px;
+                            weight: normal;
+                        }
+
+                        color: var(--sec-color);
+                    }
+
+                    i {
+                        margin-right: 10px;
+                        color: var(--sec-color);
+                    }
+
+                }
+            }
+        }
+
+        section {
+            >P {
+                color: var(--main-color);
+
+                span {
+                    color: var(--sec-color);
+                }
+            }
+
+            .operations {
+                display: flex;
+                gap: 50px;
+
+                .Transaction {
+                    width: 500px;
+
+                    .buttons {
+                        padding: 30px;
+
+                        .button {
+                            width: 200px;
+                            @include button;
+                        }
+
+                        .buy {
+                            color: white;
+                            background-color: #1652f0;
+                        }
+
+                        .sell {
+                            color: var(--main-color);
+                            box-shadow: 0px 0px 1px 0px var(--sec-color);
+                            background: none;
+                            margin-left: 20px;
+                        }
+                    }
+
+                    form {
+                        .selector {
+                            font-size: 13px;
+
+                            label {
+                                color: #53555c;
+                            }
+
+                            >div:last-of-type {
+                                margin: 15px 0;
+                                display: flex;
+                                align-items: center;
+
+                                select,
+                                input {
+                                    height: 35px;
+                                    width: 250px;
+                                    outline: none;
+                                    border: none;
+                                    border-radius: 4px 0 0 4px;
+                                    padding-left: 10px;
+                                    text-transform: capitalize;
+                                    cursor: pointer;
+                                    background: var(--th-colo);
+                                    color: var(--sec-color);
+                                }
+
+                                select {
+                                    border-radius: 4px 0 0 4px;
+                                }
+
+                                input[type="number"] {
+                                    border-radius: 0 4px 4px 0;
+                                }
+
+                                &:checked input[type="number"] {
+                                    border: 1px solid;
+                                }
+                            }
+                        }
+                    }
+
+                    .limit {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        span:first-of-type {
+                            color: var(--sec-color);
+                        }
+
+                        span:last-of-type {
+                            color: var(--color-text);
+                        }
+                    }
+
+                    button[type="submit"] {
+                        @include button;
+                        width: 500px;
+                        margin-top: 20px;
+                        background-color: var(--button-color);
+                        color: white;
+                        text-transform: capitalize;
+                    }
+
+                    p {
+                        margin-top: 70px;
+                        color: var(--sec-color);
+                    }
+                }
+
+                .operations-infor {
+                    font-size: 14px;
+
+                    .buyer-seller-info {
+                        width: 700px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 30px;
+
+                        img {
+                            width: 50px;
+                            border-radius: 25px;
+                        }
+
+                        a {
+                            color: var(--main-color);
+                        }
+                    }
+
+                    .buyer,
+                    .seller {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .info-buyer {
+                        margin-left: 10px;
+                    }
+
+                    .info-seller {
+                        margin-right: 10px;
+                        text-align: end;
+                    }
+
+                    .operations-deatils {
+                        li {
+                            padding-left: 10px;
+                            background: var(--th-colo);
+                            display: flex;
+                            align-items: center;
+                            gap: 200px;
+                            border-radius: 6px;
+                            margin-bottom: 15px;
+                            color: var(--sec-color);
+
+                            &:first-of-type {
+                                color: var(--main-color);
+                            }
+
+                            .tax {
+                                color: var(--font-color);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+/*end code*/

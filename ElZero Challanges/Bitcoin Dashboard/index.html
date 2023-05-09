@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=image.png, initial-scale=1.0">
+    <meta name="author" content="mohammed abu raida">
+    <meta name="discription" content="Bitcoin Dashboard - Elzero Web School Challenge Solution - by mohammed abu raida">
+    <!-- main css file -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- normalize file -->
+    <link rel="stylesheet" href="../Normalize/normalize.css">
+    <!-- fontawsome color -->
+    <link rel="stylesheet" href="../Normalize/all.main.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <title>Bitcoin Dashboard</title>
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#" id="dashboard">
+                        <i class="fa-sharp fa-solid fa-ticket" name="dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="#">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <span>Transfers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>Loging</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Setting</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <main class="sidecoin">
+            <header>
+                <div class="logo-img">
+                    <img src="./image/logo.png" alt="">
+                </div>
+                <nav>
+                    <div class="balance">
+                        <span>0.0025 <b>₿</b></span>
+                        <span>219.63 USD</span>
+                    </div>
+                    <ul class="data-user">
+                        <i class="fa-solid fa-user logger"></i>
+                        <a href="#">Mohammed abu Raida</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </ul>
+                </nav>
+            </header>
+            <section>
+                <p>Welcome Back, <span>Mohammed</span></p>
+                <div>
+                    <div class="operations">
+                        <div class="Transaction">
+                            <div class="buttons">
+                                <button class="button buy">buy</button>
+                                <button class="button sell">sell</button>
+                            </div>
+                            <form action="#" method="post">
+                                <div class="selector">
+                                    <label for="currency">currency</label> <br>
+                                    <div>
+                                        <select name="receive-currency" id="currency">
+                                            <option value="bitcoin">bitcoin</option>
+                                            <option value="ethereum">Ethereum (ETH)</option>
+                                            <option value="tether">Tether (USDT)</option>
+                                            <option value="solana">Solana (Sol)</option>
+                                            <option value="binance-coin">Binance Coin (BNB)</option>
+                                            <option value="binance-coin">United States Dollar (USD)</option>
+                                        </select>
+                                        <input type="number" name="recesive-amount" id="recesive-amount"
+                                            placeholder="125.00 USD">
+                                    </div>
+                                </div>
+                            </form>
+                            <form action="#" method="post">
+                                <div class="selector">
+                                    <label for="Method">Payment Method</label> <br>
+                                    <div>
+                                        <select name="Payment-Method" id="Method">
+                                            <option value="bitcoin">Bank Transfer</option>
+                                            <option value="ethereum">Credit Card</option>
+                                            <option value="tether">Debit Card</option>
+                                        </select>
+                                        <input type="number" name="payment-method-details"
+                                            placeholder="Payment Method Details">
+                                    </div>
+                                </div>
+                            </form>
+                            <form action="#" method="post">
+                                <div class="selector">
+                                    <label for="currency">Enter Spend amount</label> <br>
+                                    <div>
+                                        <select name="Spend-currency" id="currency">
+                                            <option value="bitcoin">Bitcoin (BTC)</option>
+                                            <option value="ethereum">Ethereum (ETH)</option>
+                                            <option value="tether">Tether (USDT)</option>
+                                            <option value="solana">Solana (Sol)</option>
+                                            <option value="binance-coin">Binance Coin (BNB)</option>
+                                            <option value="binance-coin">United States Dollar (USD)</option>
+                                        </select>
+                                        <input type="number" nname="spend-amount" id="spend-amount"
+                                            placeholder="125.00 USD">
+                                    </div>
+                                </div>
+                                <div class="limit">
+                                    <span>Monthly Limit</span>
+                                    <span>$49750 remaining</span>
+                                </div>
+                            </form>
+                            <button type="submit">Exchang Now</button>
+                            <p>
+                                Note : Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                                voluptatem alias officia qui maxime adipisci enim, provident fugit sequi
+                                mollitia minima.
+                            </p>
+                        </div>
+                        <div class="operations-infor">
+                            <div class="buyer-seller-info">
+                                <div class="buyer">
+                                    <img src="./image/buyer.jpeg" alt="">
+                                    <div class="info-buyer">
+                                        <p>Buyer</p>
+                                        <p>Mohammed</p>
+                                        <a href="https://mail.google.com/">abureada2017@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="seller">
+                                    <div class="info-seller">
+                                        <p>Seller</p>
+                                        <p>Rana</p>
+                                        <a href="https://mail.google.com/">rana2001@gmail.com</a>
+                                    </div>
+                                    <img src="./image/seller.png" alt="">
+                                </div>
+                            </div>
+                            <div class="operations-deatils">
+                                <ul>
+                                    <li>
+                                        <p>You are selling</p>
+                                        <span>0.00254 BTC</span>
+                                    </li>
+                                    <li>
+                                        <p>Payment Method</p>
+                                        <span>Bank of America **********5245</span>
+                                    </li>
+                                    <li>
+                                        <p>Exchange Rate</p>
+                                        <span>0.00212455 BTC</span>
+                                    </li>
+                                    <li>
+                                        <p>Fee</p>
+                                        <span>$28.00 USD</span>
+                                    </li>
+                                    <li>
+                                        <p>Total</p>
+                                        <span>$854.00 USD</span>
+                                    </li>
+                                    <li>
+                                        <p>Vat</p>
+                                        <span class="tax">$25.00 USD</span>
+                                    </li>
+                                    <li>
+                                        <p>Sub Total</p>
+                                        <span>$1232.00 USD</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

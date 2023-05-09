@@ -1,0 +1,298 @@
+/* start  var */
+:root {
+  --main-color: #1652f0;
+  --sec-color: #8c9fbb;
+  --th-colo: #eef2fe;
+  --ground-color: #f2f6fe;
+  --font-color: #fb99ac;
+  --button-color: #10d876;
+  --active-color: #f6f6f614;
+  --color-text: #53555c;
+}
+
+/* end var */
+/* start glo rul */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dashboard {
+  background-color: white;
+  min-height: 100vh;
+}
+
+/* end glo rul */
+/* start  code */
+.dashboard {
+  display: flex;
+}
+.dashboard .sidebar {
+  width: 170px;
+  background: var(--main-color);
+  padding: 20px;
+}
+@media (max-width: 767px) {
+  .dashboard .sidebar {
+    width: 40px;
+    padding: 5px;
+  }
+}
+.dashboard .sidebar ul {
+  margin-top: 50px;
+}
+.dashboard .sidebar ul a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .dashboard .sidebar ul a {
+    display: block;
+    padding: 5px;
+  }
+}
+.dashboard .sidebar ul a span {
+  margin-left: 10px;
+  font-size: 12px;
+}
+@media (max-width: 767px) {
+  .dashboard .sidebar ul a span {
+    display: none;
+  }
+}
+.dashboard .sidebar ul a.active {
+  background-color: var(--active-color);
+}
+.dashboard .sidebar ul a:hover {
+  background-color: var(--active-color);
+}
+.dashboard .sidecoin {
+  width: 100%;
+  position: relative;
+  padding: 0 15px;
+  font-size: 15px;
+}
+.dashboard .sidecoin header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.dashboard .sidecoin header nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.dashboard .sidecoin header nav .balance {
+  padding: 9px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 1px 0px var(--sec-color);
+  background: var(--th-colo);
+  margin-right: 20px;
+  font-size: 13px;
+}
+.dashboard .sidecoin header nav .balance span:first-of-type {
+  padding: 0 12px;
+  color: var(--main-color);
+}
+.dashboard .sidecoin header nav .balance span:last-of-type {
+  padding-right: 12px;
+  color: var(--sec-color);
+}
+.dashboard .sidecoin header nav .data-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard .sidecoin header nav .data-user .logger {
+  font-size: 12px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.dashboard .sidecoin header nav .data-user a {
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--sec-color);
+}
+.dashboard .sidecoin header nav .data-user i {
+  margin-right: 10px;
+  color: var(--sec-color);
+}
+.dashboard .sidecoin section > P {
+  color: var(--main-color);
+}
+.dashboard .sidecoin section > P span {
+  color: var(--sec-color);
+}
+.dashboard .sidecoin section .operations {
+  display: flex;
+  gap: 50px;
+}
+.dashboard .sidecoin section .operations .Transaction {
+  width: 500px;
+}
+.dashboard .sidecoin section .operations .Transaction .buttons {
+  padding: 30px;
+}
+.dashboard .sidecoin section .operations .Transaction .buttons .button {
+  width: 200px;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.dashboard .sidecoin section .operations .Transaction .buttons .buy {
+  color: white;
+  background-color: #1652f0;
+}
+.dashboard .sidecoin section .operations .Transaction .buttons .sell {
+  color: var(--main-color);
+  box-shadow: 0px 0px 1px 0px var(--sec-color);
+  background: none;
+  margin-left: 20px;
+}
+.dashboard .sidecoin section .operations .Transaction form .selector {
+  font-size: 13px;
+}
+.dashboard .sidecoin section .operations .Transaction form .selector label {
+  color: #53555c;
+}
+.dashboard .sidecoin section .operations .Transaction form .selector > div:last-of-type {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+.dashboard .sidecoin section .operations .Transaction form .selector > div:last-of-type select,
+.dashboard .sidecoin section .operations .Transaction form .selector > div:last-of-type input {
+  height: 35px;
+  width: 250px;
+  outline: none;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  padding-left: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  background: var(--th-colo);
+  color: var(--sec-color);
+}
+.dashboard .sidecoin section .operations .Transaction form .selector > div:last-of-type select {
+  border-radius: 4px 0 0 4px;
+}
+.dashboard .sidecoin section .operations .Transaction form .selector > div:last-of-type input[type=number] {
+  border-radius: 0 4px 4px 0;
+}
+.dashboard .sidecoin section .operations .Transaction form .selector > div:last-of-type:checked input[type=number] {
+  border: 1px solid;
+}
+.dashboard .sidecoin section .operations .Transaction .limit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard .sidecoin section .operations .Transaction .limit span:first-of-type {
+  color: var(--sec-color);
+}
+.dashboard .sidecoin section .operations .Transaction .limit span:last-of-type {
+  color: var(--color-text);
+}
+.dashboard .sidecoin section .operations .Transaction button[type=submit] {
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 500px;
+  margin-top: 20px;
+  background-color: var(--button-color);
+  color: white;
+  text-transform: capitalize;
+}
+.dashboard .sidecoin section .operations .Transaction p {
+  margin-top: 70px;
+  color: var(--sec-color);
+}
+.dashboard .sidecoin section .operations .operations-infor {
+  font-size: 14px;
+}
+.dashboard .sidecoin section .operations .operations-infor .buyer-seller-info {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.dashboard .sidecoin section .operations .operations-infor .buyer-seller-info img {
+  width: 50px;
+  border-radius: 25px;
+}
+.dashboard .sidecoin section .operations .operations-infor .buyer-seller-info a {
+  color: var(--main-color);
+}
+.dashboard .sidecoin section .operations .operations-infor .buyer,
+.dashboard .sidecoin section .operations .operations-infor .seller {
+  display: flex;
+  align-items: center;
+}
+.dashboard .sidecoin section .operations .operations-infor .info-buyer {
+  margin-left: 10px;
+}
+.dashboard .sidecoin section .operations .operations-infor .info-seller {
+  margin-right: 10px;
+  text-align: end;
+}
+.dashboard .sidecoin section .operations .operations-infor .operations-deatils li {
+  padding-left: 10px;
+  background: var(--th-colo);
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  color: var(--sec-color);
+}
+.dashboard .sidecoin section .operations .operations-infor .operations-deatils li:first-of-type {
+  color: var(--main-color);
+}
+.dashboard .sidecoin section .operations .operations-infor .operations-deatils li .tax {
+  color: var(--font-color);
+}
+
+/*end code*/
