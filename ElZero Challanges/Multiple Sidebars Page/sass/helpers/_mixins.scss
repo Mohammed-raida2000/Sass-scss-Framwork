@@ -1,0 +1,41 @@
+//media quairy
+@mixin media-queiry ($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+//fontbold-13
+
+@mixin fontbold-12 {
+    font: {
+        size: 12px;
+        weight: bold;
+    }
+}
+
+
+//Placeholder Selectors
+.header {
+    padding: 20px;
+    @include fontbold-12;
+    border-bottom: 2px solid var(--secground-color);
+    padding-bottom: 20px;
+}
+
+.input-submit {
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #706a6a;
+}
+
+// ... كلاس مزيف pusedo class 
+.main-box {
+    background-color: var(--mainground-color);
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
